@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <title>Aplikasi Prediksi Mobile Price</title>
+    </head>
+    <body
+        class="
+            flex flex-col
+            justify-between
+            item-center
+            p-8
+            min-h-screen
+            bg-gradient-to-r
+            from-green-400
+            to-blue-500
+            text-gray-800
+            md:flex-row
+        "
+    >
+        <main class="bg-white p-16 rounded-lg">
+            <h1 class="text-3xl font-bold mb-8">
+                Mobile Spesification:
+            </h1>
+
+            <form
+                action="{{ url_for('predict') }}"
+                method="post"
+                class="flex flex-col"
+            >
+                <label for="BatteryPower" class="mb-2">BatteryPower</label>
+                <input
+                    type="text"
+                    name="BatteryPower"
+                    placeholder="BatteryPower"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="Blue" class="mb-2">Blue</label>
+                <input
+                    type="text"
+                    name="Blue"
+                    placeholder="Blue"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="ClockSpeed" class="mb-2">ClockSpeed</label>
+                <input
+                    type="text"
+                    name="ClockSpeed"
+                    placeholder="ClockSpeed"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="DualSim" class="mb-2">DualSim</label>
+                <input
+                    type="text"
+                    name="DualSim"
+                    placeholder="DualSim"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="Fc" class="mb-2">Fc</label>
+                <input
+                    type="text"
+                    name="Fc"
+                    placeholder="Fc"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="FourG" class="mb-2">FourG</label>
+                <input
+                    type="text"
+                    name="FourG"
+                    placeholder="FourG"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="IntMemory" class="mb-2">IntMemory</label>
+                <input
+                    type="text"
+                    name="IntMemory"
+                    placeholder="IntMemory"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="MDep" class="mb-2">MDep</label>
+                <input
+                    type="text"
+                    name="MDep"
+                    placeholder="MDep"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="MobileWt" class="mb-2">MobileWt</label>
+                <input
+                    type="text"
+                    name="MobileWt"
+                    placeholder="MobileWt"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="NCores" class="mb-2">NCores</label>
+                <input
+                    type="text"
+                    name="NCores"
+                    placeholder="NCores"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="Pc" class="mb-2">Pc</label>
+                <input
+                    type="text"
+                    name="Pc"
+                    placeholder="Pc"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="PxHeight" class="mb-2">PxHeight</label>
+                <input
+                    type="text"
+                    name="PxHeight"
+                    placeholder="PxHeight"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="PxWidth" class="mb-2">PxWidth</label>
+                <input
+                    type="text"
+                    name="PxWidth"
+                    placeholder="PxWidth"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="Ram" class="mb-2">Ram</label>
+                <input
+                    type="text"
+                    name="Ram"
+                    placeholder="Ram"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="ScH" class="mb-2">ScH</label>
+                <input
+                    type="text"
+                    name="ScH"
+                    placeholder="ScH"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="ScW" class="mb-2">ScW</label>
+                <input
+                    type="text"
+                    name="ScW"
+                    placeholder="Sc W"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="TalkTime" class="mb-2">TalkTime</label>
+                <input
+                    type="text"
+                    name="TalkTime"
+                    placeholder="TalkTime"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="ThreeG" class="mb-2">ThreeG</label>
+                <input
+                    type="text"
+                    name="ThreeG"
+                    placeholder="ThreeG"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="TouchScreen" class="mb-2">TouchScreen</label>
+                <input
+                    type="text"
+                    name="TouchScreen"
+                    placeholder="TouchScreen"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <label for="Wifi" class="mb-2">Wifi</label>
+                <input
+                    type="text"
+                    name="Wifi"
+                    placeholder="Wifi"
+                    required="required"
+                    class="p-4 bg-gray-100 rounded-md"
+                />
+
+                <button
+                    type="submit"
+                    class="
+                        flex
+                        justify-center
+                        align-center
+                        mt-8
+                        p-4
+                        bg-gradient-to-r
+                        from-green-400
+                        to-blue-500
+                        text-white
+                        rounded-md
+                    "
+                >
+                    PREDIKSI SEKARANG
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-arrow-right ml-4"
+                    >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </form>
+        </main>
+        <section class="mt-8 h-full flex-auto rounded-lg md:mt-0 md:ml-8">
+            <div class="bg-white p-16 rounded-lg">
+                <h1 class="text-2xl mb-8">
+                    Mobile Price tersebut diprediksikan
+                </h1>
+                <h2 class="text-5xl font-bold">{{ prediction }}</h2>
+                {% if (prediction) != '' %}
+                <div class="mt-8">
+                    <p>Battery Power: {{ BatteryPower }}</p>
+                    <p>Blue: {{ Blue }}</p>
+                    <p>Clock Speed: {{ ClockSpeed }}</p>
+                    <p>Dual Sim: {{ DualSim }}</p>
+                    <p>Fc: {{ Fc }}</p>
+                    <p>Four G: {{ FourG }}</p>
+                    <p>Int Memory: {{ IntMemory }}</p>
+                    <p>M Dep: {{ MDep }}</p>
+                    <p>Mobile Wt: {{ MobileWt }}</p>
+                    <p>N Cores: {{ NCores }}</p>
+                    <p>Pc: {{ Pc }}</p>
+                    <p>Px Height: {{ PxHeight }}</p>
+                    <p>Px Width: {{ PxWidth }}</p>
+                    <p>Ram: {{ Ram }}</p>
+                    <p>Sc H: {{ ScH }}</p>
+                    <p>Sc W: {{ ScH }}</p>
+                    <p>Talk Time: {{ TalkTime }}</p>
+                    <p>Three G: {{ ThreeG }}</p>
+                    <p>Touch Screen: {{ TouchScreen }}</p>
+                    <p>Wifi: {{ Wifi }}</p>
+                </div>
+                {% endif %}
+            </div>
+            <div class="flex justify-around bg-white p-16 rounded-lg mt-8">
+
+                <img
+                    class="h-24 md:h-28"
+                    src="https://drive.google.com/thumbnail?id=1U664Ihl02fVgBVTvZ1-5kxotHDs-Uomq"
+                    alt="logo-it-itts"
+
+                />
+            </div>
+        </section>
+    </body>
+</html>
